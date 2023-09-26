@@ -10,13 +10,13 @@ public class Creature {
 
     public Creature(String name, int attack, int defense, int health) {
         this.name=name;
-        this.health = this.cheakHealth(health);
-        this.defense=this.cheakParameter(defense);
-        this.attack=this.cheakParameter(attack);
+        this.health = this.checkHealth(health);
+        this.defense=this.checkParameter(defense);
+        this.attack=this.checkParameter(attack);
 
     }
 
-    private int cheakParameter(int parameter){
+    private int checkParameter(int parameter){
         if (parameter<=30&&parameter>=1){
             return parameter;}
         else {
@@ -39,7 +39,7 @@ public class Creature {
         }
     }
 
-    private int cheakHealth(int health){
+    private int checkHealth(int health){
         if (health>0){
             return health;
         }
